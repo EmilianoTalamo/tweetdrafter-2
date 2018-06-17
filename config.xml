@@ -3,7 +3,7 @@
     xmlns:gap   = "http://phonegap.com/ns/1.0"
     id          = "com.emilianotalamo.tweetdrafter2"
     versionCode = "10"
-    version     = "2.0.2" >
+    version     = "2.0.3" >
 
   <name>tweetdrafter</name>
 
@@ -56,7 +56,9 @@
 
   <preference name="ShowSplashScreenSpinner" value="false"/>
   <preference name="SplashMaintainAspectRatio" value="true" />
-  <access />
   <plugin name="cordova-plugin-whitelist" spec="1" />
+  <access origin="*" />
+  <allow-navigation href="*" />
+  <allow-intent href="*" />
 
 </widget>
