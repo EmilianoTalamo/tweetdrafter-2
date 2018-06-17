@@ -2,9 +2,12 @@
 
 
 app.controller("navBar", function($scope, $rootScope, $location, $route, $routeParams, $mdSidenav) {
-	
+
 	$rootScope.$on( "$routeChangeStart", function(event, next, current) {
-		$rootScope.currentPath = next.$$route.originalPath;
+		if(next.$$route === undefined)
+			$rootScope.currentPath = '/';
+		else
+			$rootScope.currentPath = next.$$route.originalPath;
 	});
 
 	// Back button
