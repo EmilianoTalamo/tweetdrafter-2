@@ -1,0 +1,27 @@
+<div class="modalContent" ng-controller="modalMenu">
+	<!-- <button type="button" class="close" data-dismiss="modal" aria-hidden="true" ng-click="closeModal()">&times;</button>
+	<p class="modal-title">{{ TweetContent }}</p></div> -->
+	<div class="modal-body" id="tweetContent">
+		<p>{{ tweetContent }}</p>
+	</div>
+	<div class="modal-footer">
+
+		<button 
+			mn-touch 
+			secure-tap="btnTweet()" 
+			md-ink-ripple="true"
+		>Tweet</button>
+
+		<button 
+			mn-touch 
+			secure-tap="closeModal()"
+			md-ink-ripple="true" 
+			ngClipboard
+			ngClipboard-success="copySuccess(e)"
+			data-clipboard-target="#clipboardContent"
+		>Copy</button>
+		
+		<button mn-touch secure-tap="btnDelete()" md-ink-ripple="true">Delete</button>
+	</div>
+	<textarea name="" id="clipboardContent" cols="1" rows="1">{{ tweetContent }}</textarea>
+</div>

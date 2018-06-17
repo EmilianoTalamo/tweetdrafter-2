@@ -1,0 +1,280 @@
+@import url('tweetdrafter-fonts.css');
+
+*{
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	user-select: none;
+	font-family: 'Quicksand';
+	font-weight: 400;
+	overflow-x: hidden;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-family: 'Quicksand';
+}
+
+body, .app, .app-body{
+	background-color: #ffffff;
+	overflow: auto;
+}
+
+.has-navbar-top .app-body{
+	padding-top: 64px;
+}
+
+.navbar-app{
+	background-color: #2196F3;
+	color: white;
+	border: none;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.05), 0 3px 6px rgba(0,0,0,0.1);
+	overflow: hidden;
+}
+
+md-icon.md-default-theme, md-icon{
+	color: white;
+}
+
+#newTweetBtn{
+	position: fixed;
+	right: 1.5em;
+	bottom: 2em;
+	width: calc(2.5em + 5vw);
+	height: calc(2.5em + 5vw);
+}
+#newTweetBtn md-icon{
+	height: 60%;
+	width: 60%;
+}
+
+div[ng-controller="viewInput"]{
+	overflow: hidden;
+}
+
+#inputContent{
+	box-sizing: border-box;
+	width: 100%;
+	height: calc(90vh - 3em);
+	border-bottom: none;
+	margin: auto;
+	padding: 1em;
+	font-size: 1.6em;
+	line-height: 120%;
+	font-family: 'Noto Serif', 'Roboto Slab', serif;
+	resize: none;
+	border: none;
+	background: none;
+	-webkit-touch-callout: initial;
+	-webkit-user-select: initial;
+	user-select: initial;
+}
+#inputContent:focus{
+	outline: none;
+}
+
+#charcount{
+	text-align: right;
+	display: block;
+	font-size: 1.3em;
+	padding-top: 0.3em;
+	padding-right: 1em;
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+#charcount.charcount-err{
+	color: red;
+}
+
+ul#tweetsContainer{
+	padding-left: 0;
+}
+
+ul#tweetsContainer > li.tweetItem{
+	margin: 0.6em;
+	padding: 0.4em 0.6em;
+	font-size: calc(0.75em + 1.5vw);
+	text-overflow: initial;
+	white-space: initial;
+	background-color: #fafafa;
+	border-radius: 2px;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	color: rgba(0,0,0,0.7);
+	min-height: 3em;
+	display: flex;
+	align-items: center;
+	border-left: 2px solid #2196F3;
+	user-select: none;
+	position: relative;
+	z-index: 0;
+	height: initial;
+	max-height: 99999px;
+}
+ul#tweetsContainer > li.tweetItem:active{
+	box-shadow: 0 1px 8px rgba(0,0,0,0.15), 0 1px 4px rgba(0,0,0,0.3);
+	transition: box-shadow 300ms ease-out;
+}
+
+ul#tweetsContainer > li.tweetItem.tweetItem-long{
+	border-left-color: red;
+}
+ul#tweetsContainer > li.tweetItem.deletedTweet{
+	transform: translateX(-100%);
+	opacity: 0;
+	pointer-events: none;
+	transition: 
+		transform 800ms ease-in, 
+		opacity 600ms linear;
+}
+
+li.tweetItem.longTweet{
+	border-left-color: red;
+}
+
+.modal .modal-dialog .modal-content{
+	padding: 0;
+	border: none;
+	border-radius: 4px;
+	width: 90vw;
+	max-width: 600px;
+}
+
+.modalContent .modal-body{
+	background-color: #2196F3;
+	color: white;
+	padding: 0.6em 1em;
+	font-size: 1.2em;
+	max-height: 8em;
+}
+
+.modalContent .modal-body > p{
+	margin: 0;
+}
+
+.modal-footer{
+	margin: 0;
+	padding: 0;
+}
+
+.modal-footer > button{
+	display: block;
+	width: 100%;
+	background-color: white;
+	border: none;
+	font-size: 1.2em;
+	font-weight: medium;
+	line-height: 2.5;
+	position: relative;
+	outline: none;
+}
+
+.modal-footer > button:not(:first-of-type){
+	border-top: 1px solid rgba(0,0,0,0.12);
+}
+
+#clipboardContent{
+	position: fixed;
+	width: 0;
+	height: 0;
+	left: -9999;
+	top: -9999;
+	opacity: 0;
+}
+
+md-backdrop.md-sidenav-backdrop{
+	z-index: 1001;
+}
+
+md-sidenav.md-sidenav-left{
+	z-index: 1002;
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: column;
+	position: absolute;
+	background-image: url("../res/assets/foggy-birds.png");
+}
+
+.sidebar-brand, .sidebar-about{
+	text-align: center;
+	font-family: 'Quicksand';
+	padding: 2em;
+	overflow: hidden;
+	background: none;
+}
+
+.sidebar-brand{
+	display: flex;
+	align-items: center;
+	flex: 75%;
+}
+
+.sidebar-about{
+	flex: fill;
+}
+
+.sidebar-brand img{
+	width: 25vh;
+}
+
+.sidebar-brand h1{
+	line-height: 3;
+}
+
+.sidebar-about, .sidebar-about a{
+	width: 100%;
+	background-color: #222222;
+	margin: 0;
+	position: relative;
+	padding: 1.5em;
+}
+
+.sidebar-about p, .sidebar-about a{
+	font-size: 1.1em;
+	text-decoration: none;
+	color: white;
+}
+
+.sidebar-about img{
+	width: 20%;
+}
+
+p#toast{
+	position: fixed;
+	bottom: -4.8rem;
+	left: 0;
+	width: 100%;
+	margin: 0;
+	text-align: center;
+	background-color: rgba(34,34,34,0.9);
+	color: white;
+	font-size: 1.4rem;
+	font-weight: 600;
+	padding: 8px 16px;
+	line-height: 2;
+	z-index: 9999;
+	pointer-events: none;
+	transition: bottom 400ms ease-out, opacity 100ms linear;
+}
+
+
+/* Page transitions */
+
+.navbar > .ng-enter{
+	animation: fade 200ms linear;
+}
+
+.ng-enter.app-body{ 
+	/* z-index: 8888; */
+	animation: fade 200ms linear, scale 300ms ease-out;
+}
+
+@keyframes fade{
+	from	{ opacity: 0; }
+	to		{ opacity: 1; }
+}
+
+@keyframes scale{
+	from	{ transform: scale(0.98) }
+	to		{ transform: scale(1); }
+}
