@@ -1,64 +1,68 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <widget xmlns   = "http://www.w3.org/ns/widgets"
-    xmlns:gap   = "http://phonegap.com/ns/1.0"
-    id          = "com.emilianotalamo.tweetdrafter2"
-    versionCode = "10"
-    version     = "2.0.3" >
+		xmlns:gap   = "http://phonegap.com/ns/1.0"
+		id          = "com.emilianotalamo.tweetdrafter2"
+		versionCode = "10"
+		version     = "2.0" >
 
-  <name>tweetdrafter</name>
+	<name>tweetdrafter</name>
 
-  <description>
-      Write drafts for tweets.
-  </description>
+	<description>
+			Write drafts for tweets.
+	</description>
 
-  <author href="https://github.com/EmilianoTalamo" email="emilianotalamo@gmail.com">
-      Emiliano Tálamo
-  </author>
+	<author 
+		href="https://github.com/EmilianoTalamo" email="emilianotalamo@gmail.com">
+			Emiliano Tálamo
+	</author>
 
-  <preference name="android-minSdkVersion" value="21" />
+	<preference name="android-minSdkVersion" value="21" />
 
-  <platform name="android" />
-  <preference name="permissions" value="none"/>
-  <preference name="phonegap-version" value="cli-6.5.0" />
-  <preference name="orientation" value="portrait" /> 
-  <preference name="target-device" value="universal" />
-  <plugin name="cordova-plugin-splashscreen" source="npm" />
+	<content src="index.html" />
 
-  <plugin name="cordova-plugin-statusbar" source="npm"/>
-  <preference name="StatusBarOverlaysWebView" value="true" />
-    <preference name="StatusBarBackgroundColor" value="#2196f3" />
-    <preference name="StatusBarStyle" value="lightcontent" />
+	<platform name="android" />
 
-  <icon src="res/icon/android/icon-36-ldpi.png" platform="android" qualifier="ldpi" />
-  <icon src="res/icon/android/icon-48-mdpi.png" platform="android" qualifier="mdpi" />
-  <icon src="res/icon/android/icon-72-hdpi.png" platform="android" qualifier="hdpi" />
-  <icon src="res/icon/android/icon-96-xhdpi.png" platform="android" qualifier="xhdpi" />
-  <icon src="res/icon/android/icon-144-xxhdpi.png" platform="android" qualifier="xxhdpi" />
-  <icon src="res/icon/android/icon-192-xxxhdpi.png" platform="android" qualifier="xxxhdpi" />
+	<plugin name="cordova-plugin-splashscreen" source="npm" />
+	<plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1" />
+	<plugin name="cordova-plugin-statusbar" source="npm"/>
 
-  <gap:splash src="res/screen/android/splash-port-hdpi.png" 
-    gap:platform="android" gap:density="hdpi" />
-    
-  <gap:splash src="res/screen/android/splash-port-ldpi.png" 
-    gap:platform="android" gap:density="ldpi" />
+	<preference name="permissions" value="none"/>
+	<preference name="phonegap-version" value="cli-6.5.0" />
+	<preference name="orientation" value="portrait" /> 
+	<preference name="target-device" value="universal" />
+	<preference name="StatusBarOverlaysWebView" value="true" />
+	<preference name="StatusBarBackgroundColor" value="#2196f3" />
+	<preference name="StatusBarStyle" value="lightcontent" />
+	<preference name="ShowSplashScreenSpinner" value="false"/>
+	<preference name="SplashMaintainAspectRatio" value="true" />
 
-  <gap:splash src="res/screen/android/splash-port-mdpi.png" 
-    gap:platform="android" gap:density="mdpi" />
+	<icon src="res/icon/android/icon-36-ldpi.png" platform="android" qualifier="ldpi" />
+	<icon src="res/icon/android/icon-48-mdpi.png" platform="android" qualifier="mdpi" />
+	<icon src="res/icon/android/icon-72-hdpi.png" platform="android" qualifier="hdpi" />
+	<icon src="res/icon/android/icon-96-xhdpi.png" platform="android" qualifier="xhdpi" />
+	<icon src="res/icon/android/icon-144-xxhdpi.png" platform="android" qualifier="xxhdpi" />
+	<icon src="res/icon/android/icon-192-xxxhdpi.png" platform="android" qualifier="xxxhdpi" />
 
-  <gap:splash src="res/screen/android/splash-port-xhdpi.png" 
-    gap:platform="android" gap:density="xhdpi" />
+	<gap:splash src="res/screen/android/splash-port-hdpi.png" 
+		gap:platform="android" gap:density="hdpi" />
+		
+	<gap:splash src="res/screen/android/splash-port-ldpi.png" 
+		gap:platform="android" gap:density="ldpi" />
 
-  <gap:splash src="res/screen/android/splash-port-xxhdpi.png" 
-    gap:platform="android" gap:density="xxhdpi" />
+	<gap:splash src="res/screen/android/splash-port-mdpi.png" 
+		gap:platform="android" gap:density="mdpi" />
 
-  <gap:splash src="res/screen/android/splash-port-xxxhdpi.png" 
-    gap:platform="android" gap:density="xxxhdpi" />
+	<gap:splash src="res/screen/android/splash-port-xhdpi.png" 
+		gap:platform="android" gap:density="xhdpi" />
 
-  <preference name="ShowSplashScreenSpinner" value="false"/>
-  <preference name="SplashMaintainAspectRatio" value="true" />
-  <plugin name="cordova-plugin-whitelist" spec="1" />
-  <access origin="*" />
-  <allow-navigation href="*" />
-  <allow-intent href="*" />
+	<gap:splash src="res/screen/android/splash-port-xxhdpi.png" 
+		gap:platform="android" gap:density="xxhdpi" />
+
+	<gap:splash src="res/screen/android/splash-port-xxxhdpi.png" 
+		gap:platform="android" gap:density="xxxhdpi" />
+	
+	<access origin="*" />
+	<allow-navigation href="*" />
+	<allow-intent href="*" />
 
 </widget>
