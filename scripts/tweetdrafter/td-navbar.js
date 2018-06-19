@@ -29,6 +29,8 @@ app.controller("navBar", function($scope, $rootScope, $location, $route, $routeP
 
 	// Open sidebar button
 	$scope.toggleLeft = function() {
+		$location.url('/list#sidenav');
+		$rootScope.dismissable = true;
 		$mdSidenav('left').toggle();
 	}
 });

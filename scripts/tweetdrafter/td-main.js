@@ -65,3 +65,18 @@ function showToast(msg, time) {
 		toast.html('');
 	}, time + time);
 }
+
+
+app.run(function($rootScope, $location, $ocModal, $mdSidenav, $window) {
+
+	$rootScope.dismissable = false;
+
+	$rootScope.$watch(function(){ return $location.$$hash; }, function() {
+		if($rootScope.dismissable == true) {
+			if($location.$$hash != "modal")
+				$ocModal.close();
+			if($location.$$hash != "sidenav")
+				$mdSidenav('left').close();
+		}
+	})
+})

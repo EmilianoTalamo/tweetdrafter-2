@@ -1,7 +1,7 @@
 // Tweet list controller
 
 
-app.controller("viewList", function($scope, $rootScope, $location, $ocModal) {
+app.controller("viewList", function($scope, $rootScope, $location, $ocModal, $window) {
 
 	// When this view is loaded, it will clear all tweets that are empty
 	clearEmptyTweets();
@@ -15,7 +15,11 @@ app.controller("viewList", function($scope, $rootScope, $location, $ocModal) {
 		$rootScope.selectedTweetIndex = index;
 		$ocModal.open({
 			url : './templates/modalmenu.html',
-			cls : 'fade-in'
+			cls : 'fade-in',
+			onClose : function() {
+				$rootScope.dismissable = false;
+				$location.$$hash = '';
+			}
 		});
 	};
 

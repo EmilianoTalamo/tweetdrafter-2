@@ -1,8 +1,10 @@
 // Modal menu controller
 
 
-app.controller("modalMenu", function($scope, $rootScope, $ocModal, $route) {
+app.controller("modalMenu", function($scope, $rootScope, $ocModal, $route, $location) {
 
+	$location.url('/list#modal');
+	$rootScope.dismissable = true;
 	// Get selected tweet
 	$scope.tweetContent = tweets[$rootScope.selectedTweetIndex];
 	$scope.clipboardContent = $scope.tweetContent;

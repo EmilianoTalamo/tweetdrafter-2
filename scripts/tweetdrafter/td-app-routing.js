@@ -1,7 +1,7 @@
 // App routing
 app.config(function($routeProvider) {
-	// Home
 	$routeProvider
+	// Home
 	.when("/list", {
 		templateUrl : "./templates/tweetlist.html",
 		reloadOnSearch: false
