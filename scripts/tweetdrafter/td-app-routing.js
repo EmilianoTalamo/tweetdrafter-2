@@ -3,17 +3,17 @@ app.config(function($routeProvider) {
 	// Home
 	$routeProvider
 	.when("/list", {
-		templateUrl : "/templates/tweetlist.html",
+		templateUrl : "./templates/tweetlist.html",
 		reloadOnSearch: false
 	})
 	// New tweet
 	.when("/input/:context", {
-		templateUrl : "/templates/inputpage.html",
+		templateUrl : "./templates/inputpage.html",
 		reloadOnSearch: false
 	})
 	// Edit tweet
 	.when("/input/:context/:id", {
-		templateUrl : "/templates/inputpage.html",
+		templateUrl : "./templates/inputpage.html",
 		reloadOnSearch: false
 	})
 	// Default failsafe

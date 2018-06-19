@@ -14,7 +14,7 @@ app.controller("viewList", function($scope, $rootScope, $location, $ocModal) {
 		$rootScope.selectedTweet = event.target;
 		$rootScope.selectedTweetIndex = index;
 		$ocModal.open({
-			url : '/templates/modalmenu.html',
+			url : '../../templates/modalmenu.html',
 			cls : 'fade-in'
 		});
 	};

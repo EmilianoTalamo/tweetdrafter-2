@@ -1,7 +1,7 @@
 // Navbar controller
 
 
-app.controller("navBar", function($scope, $rootScope, $location, $route, $routeParams, $mdSidenav) {
+app.controller("navBar", function($scope, $rootScope, $location, $route, $routeParams, $mdSidenav, $window) {
 
 	$rootScope.$on( "$routeChangeStart", function(event, next, current) {
 		if(next.$$route === undefined)
@@ -12,7 +12,7 @@ app.controller("navBar", function($scope, $rootScope, $location, $route, $routeP
 
 	// Back button
 	$scope.backBtn = function() {
-		$location.path("/list");
+		$window.history.back();
 	}
 
 	// Delete button
@@ -23,7 +23,7 @@ app.controller("navBar", function($scope, $rootScope, $location, $route, $routeP
 		else
 			tweets.splice($routeParams.id, 1);
 		saveOnStorage();
-		$location.path('/list');
+		$window.history.back();
 	}
 
 
