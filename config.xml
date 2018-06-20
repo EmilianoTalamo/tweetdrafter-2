@@ -4,17 +4,20 @@
 		xmlns:gap   =	"http://phonegap.com/ns/1.0"
 		id          =	"com.emilianotalamo.tweetdrafter2"
 		versionCode =	"10"
-		version     =	"2.0.2" >
+		version     =	"2.0.4" >
 
-	<name>tweetdrafter</name>
+	<name>
+		tweetdrafter
+	</name>
 
 	<description>
 			Write drafts for tweets.
 	</description>
 
 	<author 
-		href="https://github.com/EmilianoTalamo" email="emilianotalamo@gmail.com">
-			Emiliano Tálamo
+		href="https://github.com/EmilianoTalamo" 
+		email="emilianotalamo@gmail.com">
+		Emiliano Tálamo
 	</author>
 
 	<preference name="android-minSdkVersion" value="21" />
@@ -26,6 +29,7 @@
 	<plugin name="cordova-plugin-splashscreen" source="npm" />
 	<plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1" />
 	<plugin name="cordova-plugin-statusbar" source="npm"/>
+	<plugin name="cordova-plugin-vibration" source="npm"/>
 
 	<preference name="permissions" value="none"/>
 	<preference name="phonegap-version" value="cli-6.5.0" />

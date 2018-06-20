@@ -16,7 +16,7 @@ app.controller("modalMenu", function($scope, $rootScope, $ocModal, $route, $loca
 	$scope.btnTweet = function() { 
 		$ocModal.close();
 		var link = "https://twitter.com/home?status=" + tweets[$rootScope.selectedTweetIndex];
-		window.open(link);
+		window.open(link, "_blank");
 	}
 
 	// Delete button

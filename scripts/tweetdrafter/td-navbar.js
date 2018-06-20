@@ -3,7 +3,8 @@
 
 app.controller("navBar", function($scope, $rootScope, $location, $route, $routeParams, $mdSidenav, $window) {
 
-	$rootScope.$on( "$routeChangeStart", function(event, next, current) {
+	// Get route path to determine which buttons include
+	$rootScope.$on( "$routeChangeStart", function(event, next) {
 		if(next.$$route === undefined)
 			$rootScope.currentPath = '/';
 		else

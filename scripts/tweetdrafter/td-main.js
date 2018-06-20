@@ -52,6 +52,7 @@ function clearEmptyTweets() {
 }
 
 
+// Toast messages trigger function
 function showToast(msg, time) {
 	var toast = $('#toast');
 	toast.html(msg);
@@ -67,7 +68,8 @@ function showToast(msg, time) {
 }
 
 
-app.run(function($rootScope, $location, $ocModal, $mdSidenav, $window) {
+// Workaround to dismiss elements with back button
+app.run(function($rootScope, $location, $ocModal, $mdSidenav) {
 
 	$rootScope.dismissable = false;
 

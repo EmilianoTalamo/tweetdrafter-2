@@ -1,10 +1,14 @@
 // Input controller
 
 
-app.controller("viewInput", function($scope, $routeParams, $location) {
+app.controller("viewInput", function($scope, $routeParams) {
 
 	// Focus on textarea
-	$('#inputContent').focus();
+	$scope.$on('$routeChangeSuccess', function() {
+		setTimeout(function() { // Without timeout is doesn't work
+			$('#inputContent').focus();
+		}, 100);
+	});
 
 	// Trigger char counter
 	charcounter();

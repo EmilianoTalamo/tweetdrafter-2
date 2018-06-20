@@ -1,7 +1,7 @@
 // Sidebar controller
 
 
-app.controller("sidebar", function($scope, $mdSidenav, $location, $rootScope, $window) {
+app.controller("sidebar", function($scope, $mdSidenav, $rootScope) {
 	
 	// Close on swipe left
 	$scope.sidebarSwipeLeft = function() { 

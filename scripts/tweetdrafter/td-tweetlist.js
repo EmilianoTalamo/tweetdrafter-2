@@ -1,7 +1,7 @@
 // Tweet list controller
 
 
-app.controller("viewList", function($scope, $rootScope, $location, $ocModal, $window) {
+app.controller("viewList", function($scope, $rootScope, $location, $ocModal) {
 
 	// When this view is loaded, it will clear all tweets that are empty
 	clearEmptyTweets();
