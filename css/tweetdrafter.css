@@ -15,6 +15,14 @@ h1, h2, h3, h4, h5, h6{
 	font-family: 'Quicksand';
 }
 
+a{
+	cursor: default;
+}
+
+* a:hover{
+	text-decoration: none;
+}
+
 body, .app, .app-body{
 	background-color: #ffffff;
 	overflow: auto;
@@ -153,10 +161,12 @@ li.tweetItem.longTweet{
 	padding: 0;
 }
 
-.modal-footer > button{
+.modal-footer > button, .modal-footer > a{
 	display: block;
 	width: 100%;
 	background-color: white;
+	color: #333;
+	text-align: center;
 	border: none;
 	font-size: 1.2em;
 	font-weight: medium;
@@ -164,8 +174,7 @@ li.tweetItem.longTweet{
 	position: relative;
 	outline: none;
 }
-
-.modal-footer > button:not(:first-of-type){
+.modal-footer > button:not(:first-child), .modal-footer > a:not(:first-child){
 	border-top: 1px solid rgba(0,0,0,0.12);
 }
 
