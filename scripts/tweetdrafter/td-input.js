@@ -5,10 +5,12 @@ app.controller("viewInput", function($scope, $routeParams) {
 
 	// Focus on textarea
 	$scope.$on('$routeChangeSuccess', function() {
-		setTimeout(function() { // Without timeout is doesn't work
+		setTimeout(function() { // Without timeout it doesn't work
 			$('#inputContent').focus();
-			$('textarea').prop('selectionEnd', $('textarea').val().length); // Place cursor at the end
-		}, 100);
+			// Place cursor at the end
+			$('textarea').prop('selectionStart', $('textarea').val().length);
+			$('textarea').prop('selectionEnd', $('textarea').val().length);
+		}, 66);
 	});
 
 	// Trigger char counter
