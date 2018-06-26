@@ -6,9 +6,12 @@ const app = angular.module('tweetdrafter', [
 	'ngMessages', 
 	'mn', 
 	'oc.modal', 
-	'ngclipboard'
-])
-.config(function($mdThemingProvider) { // UI config
+	'ngclipboard',
+	'hmTouchEvents'
+]);
+
+// UI config
+app.config(function($mdThemingProvider) {
 	$mdThemingProvider.theme('default')
 		.primaryPalette('blue', {
 			'default' : '500',

@@ -4,10 +4,9 @@
 		<!-- Tweet item -->
 		<li 
 		ng-repeat="item in ls track by $index" 
-		mn-touch 
-		hold="heldTweet($index, $event)" 
-		secure-tap="tapTweet($index)" 
-		holdfor="600"
+		hm-press="heldTweet($index, $event)"
+		hm-tap="tapTweet($index)"
+		hm-recognizer-options="[ { 'type' : 'press', 'time' : 600 } ]"
 		class="tweetItem" 
 		ng-class="ls[$index].length > 280 ? 'tweetItem-long' : ''"
 		md-ink-ripple="#2196F3">

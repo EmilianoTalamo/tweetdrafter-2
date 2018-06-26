@@ -7,6 +7,7 @@ app.controller("viewInput", function($scope, $routeParams) {
 	$scope.$on('$routeChangeSuccess', function() {
 		setTimeout(function() { // Without timeout is doesn't work
 			$('#inputContent').focus();
+			$('textarea').prop('selectionEnd', $('textarea').val().length); // Place cursor at the end
 		}, 100);
 	});
 
