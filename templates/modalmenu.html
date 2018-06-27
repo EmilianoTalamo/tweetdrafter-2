@@ -4,10 +4,11 @@
 	</div>
 	<div class="modal-footer">
 
-		<a 
-			href="{{ btnTweetLink }}"
+		<button 
+			mn-touch 
+			secure-tap="btnTweet()" 
 			md-ink-ripple="true"
-		>Tweet</a>
+		>Tweet</button>
 
 		<button 
 			mn-touch 
@@ -18,7 +19,12 @@
 			data-clipboard-target="#clipboardContent"
 		>Copy</button>
 		
-		<button mn-touch secure-tap="btnDelete()" md-ink-ripple="true">Delete</button>
+		<button 
+			mn-touch 
+			secure-tap="btnDelete()" 
+			md-ink-ripple="true"
+		>Delete</button>
+
 	</div>
 	<textarea name="" id="clipboardContent" cols="1" rows="1">{{ tweetContent }}</textarea>
 </div>

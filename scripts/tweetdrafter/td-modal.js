@@ -11,9 +11,12 @@ app.controller("modalMenu", function($scope, $rootScope, $ocModal, $route, $loca
 
 	// vibration
 	navigator.vibrate(30);
-	
-	// Tweet button link
-	$scope.btnTweetLink = "http://twitter.com/home?status=" + tweets[$rootScope.selectedTweetIndex];
+
+	// Tweet button
+	$scope.btnTweet = function() { 
+		$ocModal.close();
+		window.open(encodeURI("http://twitter.com/home?status=" + tweets[$rootScope.selectedTweetIndex]), "_blank");
+	}
 
 	// Delete button
 	$scope.btnDelete = function() {
