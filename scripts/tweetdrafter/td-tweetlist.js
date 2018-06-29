@@ -7,6 +7,7 @@ app.controller("viewList", function($scope, $rootScope, $location, $ocModal) {
 	clearEmptyTweets();
 
 	// Retrieve items from ls
+	$scope.charLimit = charlimit;
 	$scope.ls = JSON.parse(localStorage.getItem("tweets"));
 
 	// Modal trigger

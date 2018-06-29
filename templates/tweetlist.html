@@ -8,7 +8,7 @@
 		hm-tap="tapTweet($index)"
 		hm-recognizer-options="[ { 'type' : 'press', 'time' : 600 } ]"
 		class="tweetItem" 
-		ng-class="ls[$index].length > 280 ? 'tweetItem-long' : ''"
+		ng-class="ls[$index].length > {{ charLimit }} ? 'tweetItem-long' : ''"
 		md-ink-ripple="#2196F3">
 			{{ item }}
 		</li>
