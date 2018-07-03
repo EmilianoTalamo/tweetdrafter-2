@@ -20,6 +20,7 @@ app.controller("modalMenu", function($scope, $rootScope, $ocModal, $route, $loca
 
 	// Delete button
 	$scope.btnDelete = function() {
+		$('body').css('pointer-events', 'none');
 		var element = $rootScope.selectedTweet;
 		$(element).addClass("deletedTweet");
 		tweets.splice($rootScope.selectedTweetIndex, 1);
@@ -27,6 +28,7 @@ app.controller("modalMenu", function($scope, $rootScope, $ocModal, $route, $loca
 		$ocModal.close();
 		setTimeout(function() {
 			$route.reload();
+			$('body').css('pointer-events', 'all');
 		}, 600);
 	}
 
